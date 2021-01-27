@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="Css and Js/w3.css">
+    <style>
+        body {
+            background-color: crimson;
+        }
+        
+        .container {
+            align-items: center;
+            background-color: rgb(240, 254, 255);
+            box-shadow: 5px 5px 5px rgb(63, 63, 63);
+            margin: 30px;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .mini-container {
+            align-items: center;
+            background-color: rgb(240, 254, 255);
+            box-shadow: 5px 5px 5px rgb(63, 63, 63);
+            margin: 30px;
+            margin-left: 250px;
+            margin-right: 250px;
+            padding: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <!-- never hide content -->
+        <div class="home container" style="background-color: rgb(0, 26, 255);color: #fff;">
+            <h2>QUIZ</h2>
+        </div>
+        <!-- never hide content over -->
+
+        <!-- instruction content -->
+        <div class="start-quiz">
+            <div>
+                <h3>INSTRUCTIONS</h3>
+                <h5>TOTAL QUESTIONS = 5</h5>
+            </div>
+            <button class="w3-btn w3-light-green w3-hover-green w3-round-xxlarge w3-xlarge w3-padding w3-outline-none btn">PLAY</button><br>
+            <a href="FeedbackPage.html"><button class="w3-margin w3-btn w3-purple w3-round w3-large">Feedback</button></a>
+        </div>
+        <!-- instruction content over -->
+
+        <!-- choice of class or standard -->
+        <div class="w3-hide" id="choice">
+            <div class="class container">
+                <h4>Choose Your Class</h4>
+            </div>
+            <div class="w3-content container c1">
+                <h4>1<sup>st</sup></h4>
+            </div>
+            <div id="c1">
+                <strong>
+                    <div class="mini-container" id="c1e">Easy</div>
+                    <div class="mini-container" id="c1h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c2">
+                <h4>2<sup>nd</sup></h4>
+            </div>
+            <div id="c2">
+                <strong>
+                    <div class="mini-container" id="c2e">Easy</div>
+                    <div class="mini-container" id="c2h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c3">
+                <h4>3<sup>rd</sup></h4>
+            </div>
+            <div id="c3">
+                <strong>
+                    <div class="mini-container" id="c3e">Easy</div>
+                    <div class="mini-container" id="c3h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c4">
+                <h4>4<sup>th</sup></h4>
+            </div>
+            <div id="c4">
+                <strong>
+                    <div class="mini-container" id="c4e">Easy</div>
+                    <div class="mini-container" id="c4h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c5">
+                <h4>5<sup>th</sup></h4>
+            </div>
+            <div id="c5">
+                <strong>
+                    <div class="mini-container" id="c5e">Easy</div>
+                    <div class="mini-container" id="c5h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c6">
+                <h4>6<sup>th</sup></h4>
+            </div>
+            <div id="c6">
+                <strong>
+                    <div class="mini-container" id="c6e">Easy</div>
+                    <div class="mini-container" id="c6h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c7">
+                <h4>7<sup>th</sup></h4>
+            </div>
+            <div id="c7">
+                <strong>
+                    <div class="mini-container" id="c7e">Easy</div>
+                    <div class="mini-container" id="c7h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c8">
+                <h4>8<sup>th</sup></h4>
+            </div>
+            <div id="c8">
+                <strong>
+                    <div class="mini-container" id="c8e">Easy</div>
+                    <div class="mini-container" id="c8h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c9">
+                <h4>9<sup>th</sup></h4>
+            </div>
+            <div id="c9">
+                <strong>
+                    <div class="mini-container" id="c9e">Easy</div>
+                    <div class="mini-container" id="c9h">Hard</div>
+                </strong>
+            </div>
+            <div class="w3-content container c10">
+                <h4>10<sup>th</sup></h4>
+            </div>
+            <div id="c10">
+                <strong>
+                    <div class="mini-container" id="c10e">Easy</div>
+                    <div class="mini-container" id="c10h">Hard</div>
+                </strong>
+            </div>
+        </div>
+        
+    </center>
+</body>
+<script src="../../Ashutosh/virtual django/mysite/static/jquery.min.js"></script>
+<script>
+    
+    $('.home').click(function(e) {
+        e.preventDefault();
+        var name = prompt('Your name', '');
+        if ((name = 'null') || (name = '')) {
+            alert('We welcome you')
+        } else {
+            alert('Hello ' + name + ', We welcome you')
+        }
+    });
+
+    $('.class').click(function(e) {
+        e.preventDefault();
+        alert('choose your standard')
+
+    });
+
+    $('.btn').click(function(e) {
+        e.preventDefault();
+        $('#c1').hide();
+        $('#c2').hide();
+        $('#c3').hide();
+        $('#c4').hide();
+        $('#c5').hide();
+        $('#c6').hide();
+        $('#c7').hide();
+        $('#c10').hide();
+        $('#c8').hide();
+        $('#c9').hide();
+        $('.start-quiz').hide();
+        $('#choice').removeClass('w3-hide');
+    });
+
+    $('.c1').click(function(e) {
+        e.preventDefault();
+        $('#c1').toggle();
+    });
+
+    $('.c2').click(function(e) {
+        e.preventDefault();
+        $('#c2').toggle();
+    });
+
+    $('.c3').click(function(e) {
+        e.preventDefault();
+        $('#c3').toggle();
+    });
+
+    $('.c4').click(function(e) {
+        e.preventDefault();
+        $('#c4').toggle();
+    });
+
+    $('.c5').click(function(e) {
+        e.preventDefault();
+        $('#c5').toggle();
+    });
+
+    $('.c7').click(function(e) {
+        e.preventDefault();
+        $('#c7').toggle();
+    });
+
+    $('.c6').click(function(e) {
+        e.preventDefault();
+        $('#c6').toggle();
+    });
+
+    $('.c8').click(function(e) {
+        e.preventDefault();
+        $('#c8').toggle();
+    });
+
+    $('.c9').click(function(e) {
+        e.preventDefault();
+        $('#c9').toggle();
+    });
+
+    $('.c10').click(function(e) {
+        e.preventDefault();
+        $('#c10').toggle();
+    });
+
+
+    //==================================
+    //      button click effect 
+    // =================================
+
+    
+    $('#c1e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('1 class easy.html')
+    });
+
+    $('#c1h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('1 class hard.html')
+    });
+
+    $('#c2e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('2 class easy.html')
+    });
+
+    $('#c2h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('2 class hard.html')
+    });
+
+    $('#c3e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('3 class easy.html')
+    });
+
+    $('#c3h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('3 class hard.html')
+    });
+
+    $('#c4e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('4 class easy.html')
+    });
+
+    $('#c4h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('4 class hard.html')
+    });
+
+    $('#c5e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('5 class easy.html')
+    });
+
+    $('#c5h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('5 class hard.html')
+    });
+
+    $('#c6e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('6 class easy.html')
+    });
+
+    $('#c6h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('6 class hard.html')
+    });
+
+    $('#c7e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('7 class easy.html')
+    });
+
+    $('#c7h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('7 class hard.html')
+    });
+
+    $('#c8e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('8 class easy.html')
+    });
+
+    $('#c8h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('8 class hard.html')
+    });
+
+    $('#c9e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('9 class easy.html')
+    });
+
+    $('#c9e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('9 class hard.html')
+    });
+
+    $('#c10e').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('10 class easy.html')
+    });
+
+    $('#c10h').click(function (e) { 
+        e.preventDefault();
+        window.location.assign('10 class hard.html')
+    });
+</script>
+
+</html>
